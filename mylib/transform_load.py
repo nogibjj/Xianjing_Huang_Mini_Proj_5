@@ -10,7 +10,7 @@ import os
 def load(dataset="data/play_tennis.csv"):
     """"Transforms and Loads data into the local SQLite3 database"""
     #prints the full working directory and path
-    print(os.getcwd())
+    #print(os.getcwd())
     payload = csv.reader(open(dataset, newline=''), delimiter=',')
     # skips the header of csv
     next(payload)

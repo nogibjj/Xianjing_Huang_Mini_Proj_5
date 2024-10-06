@@ -23,14 +23,14 @@ all: install lint test format
 
 generate_and_push:
 	# Create the markdown file 
-	python3 test_main.py 
+	python3 main.py
 
 	# Add, commit, and push the generated files to GitHub
 	@if [ -n "$$(git status --porcelain)" ]; then \
 		git config --local user.email "action@github.com"; \
 		git config --local user.name "GitHub Action"; \
 		git add .; \
-		git commit -m "Add SQL log"; \
+		git commit -m "Perform CRUD and add SQL log"; \
 		git push; \
 	else \
 		echo "No changes to commit. Skipping commit and push."; \

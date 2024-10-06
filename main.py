@@ -9,10 +9,12 @@ from mylib.query import create_CRUD, read_CRUD, update_CRUD, delete_CRUD
 # Extract
 print("Extracting data...")
 extract()
+print("Extracting data successfully!")
 
 # Transform and load
 print("Transforming data...")
 load()
+print("Transforming data successfully!")
 
 # CRUD
 print("Read Database...")
