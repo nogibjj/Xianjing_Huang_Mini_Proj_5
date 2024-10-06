@@ -4,7 +4,6 @@ Transforms and Loads data into the local SQLite3 database
 """
 import sqlite3
 import csv
-import os
 
 #load the csv file and insert into a new sqlite3 database
 def load(dataset="data/play_tennis.csv"):
