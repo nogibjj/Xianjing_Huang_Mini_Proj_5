@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=main --cov=mylib test_*.py
+	python3 -m pytest -vv --cov=main --cov=mylib test_*.py
 
 format:	
 	black *.py 
@@ -19,7 +19,20 @@ container-lint:
 
 refactor: format lint
 
-deploy:
-	#deploy goes here
-		
-all: install lint test format deploy
+all: install lint test format
+
+generate_and_push:
+	# Create the markdown file 
+	python3 test_main.py 
+
+	# Add, commit, and push the generated files to GitHub
+	@if [ -n "$$(git status --porcelain)" ]; then \
+		git config --local user.email "action@github.com"; \
+		git config --local user.name "GitHub Action"; \
+		git add .; \
+		git commit -m "Add SQL log"; \
+		git push; \
+	else \
+		echo "No changes to commit. Skipping commit and push."; \
+	fi
+
