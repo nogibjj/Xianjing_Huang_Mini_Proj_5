@@ -9,7 +9,7 @@ Xianjing_Huang_Mini_Proj_5/
 │   └── Dockerfile
 ├── .github/
 │   └── workflows/
-│       └── ci.yml
+│       └── cicd.yml
 ├── data/
 │   └── play_tennis.csv
 ├── imgs/
@@ -30,6 +30,25 @@ Xianjing_Huang_Mini_Proj_5/
 ├── setup.sh
 └── test_main.py
 ```
+extract.py: Extract a dataset from a URL like Kaggle or data.gov.
+JSON or CSV formats tend to work well.
+
+transform_load.py: Transforms and Loads data into the local SQLite3 database.
+
+query.py:
+- `log`: Record query in query_log.md.
+- `create_CRUD`: Insert a new record in database.
+- `read_CRUD`: Retrieve all the records in database.
+- `update_CRUD`: Replace a record with new data. 
+- `delete_CRUD`: Delete a record in database.
+
+main.py: Call all the functions in mylib/ to perform CRUD and add log.
+
+test_main.py: Test for main.
+
+Makefile: Defines scripts for common project tasks such as testing.
+
+cicd.yml: Defines the GitHub Actions workflow for install, lint, format, test, generate_and_push.
 
 ### Requirements
 * Connect to a SQL database
