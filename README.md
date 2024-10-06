@@ -45,10 +45,13 @@ Xianjing_Huang_Mini_Proj_5/
 
 ### Check format and test errors
 1. Format code `make format`
+
    ![1](/imgs/001.png)
 2. Lint code `make lint`
+
    ![2](/imgs/002.png)
 3. Test code `make test`
+
    ![3](/imgs/003.png)
 
 ### Connect to a SQL database
@@ -57,7 +60,7 @@ Extract a dataset from a URL("https://raw.githubusercontent.com/nogibjj/Xianjing
 
 play_tennis.csv
 
-<img src="/imgs/006.png" alt="0" height="200">
+<img src="/imgs/006.png" alt="0" height="300">
 
 ### CRUD Operations
 1. Read: read the original database, there are 14 records.
@@ -66,8 +69,9 @@ Call read_CRUD() and there are 15 records now. And the new inserted one is the s
 3. Update: update the last element in 15th record from "Yes" to "No".
 Call read_CRUD() and the content in database is as expected.
 4. Delete: delete record 15. Call read_CRUD() and there are only 14 records in the database now.
-<img src="/imgs/004.png" alt="0" height="350">
-<img src="/imgs/005.png" alt="0" height="350">
+
+<img src="/imgs/004.png" alt="0" height="400">
+<img src="/imgs/005.png" alt="0" height="450">
 
 ### Log of database operations
 Record query in query_log.md.
@@ -76,4 +80,6 @@ Record query in query_log.md.
 
 ### Continuous Integration (CI/CD Pipeline)
 Perform CRUD and add SQL log via CI/CD.
+
+<img src="/imgs/008.png" alt="0" height="350">
 
